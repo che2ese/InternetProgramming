@@ -2,75 +2,188 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>PortFolio</title>
+<title>MinSeong의 포트폴리오</title>
 <style>
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.container{
+body {
+    font-family: Arial, sans-serif;
+    background-color: lavender; /* 배경색 설정 */
+    color: #333; /* 기본 텍스트 색상 */
+}
+.container {
     margin: 0 auto; /* 가운데 정렬 */
-    width: 1200px;
+    width: 1200px; /* 최대 너비 */
+    padding-top: 90px; /* 헤더 높이만큼 상단 여백 */
 }
-.header{
-    margin: 15px 0;
-    display:flex; /* 레이아웃 배치 툴 */
+.header {
+    margin: 0;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(193, 193, 223); /* 헤더 배경색 */
+    padding: 15px 0; /* 내부 여백 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 그림자 */
+    z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* 배경색과 투명도 변경 전환 효과 */
 }
-.logo{
+.header.transparent {
+    background-color: rgba(193, 193, 223, 0.6); /* 스크롤 시 투명한 배경색 */
+}
+.logo {
     display: flex;
     align-items: center;
     padding: 15px;
-    cursor: pointer; /* 마우스 변환 */
-}
-.logo:hover{ /* 마우스 트리거 */
+    font-size: 1.5em;
     font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px; /* 헤더 왼쪽 여백 */
 }
-.menu{
-    background-color: #FFE9D0;
-    border-radius: 15px;
+.logo:hover {
+    color: #555; /* 호버 시 텍스트 색상 */
 }
-.menu ul{
-    display: flex;
+.menu {
+    background-color: lavender; /* 메뉴 배경색 */
+    border-radius: 15px; /* 모서리 둥글게 */
+    padding: 0 15px; /* 내부 여백 */
+    margin-right: 15px; /* 헤더 오른쪽 여백 */
 }
-li{
-    margin: 12px; /* 가운데 정렬 */
-    list-style: none; /* .없애기 */
+.menu ul {
+    display: flex; /* 가로 리스트 표시 */
+}
+.menu li {
+    margin: 12px;
+    list-style: none;
     padding: 15px;
     transition: 0.3s all;
-    border-radius: 15px;
+    border-radius: 15px; /* 모서리 둥글게 */
     cursor: pointer;
 }
-li:hover{
-    background-color: burlywood;
-    color: white;
+.menu li a {
+    text-decoration: none;
+    color: inherit; /* 기본 색상 상속 */
+}
+.menu li:hover {
+    background-color: rgb(193, 193, 223); /* 호버 시 배경색 */
+    color: white; /* 호버 시 텍스트 색상 */
+}
+.section {
+    padding: 60px 0; /* 섹션 패딩 */
+    text-align: center; /* 가운데 정렬 */
+}
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px; /* 하단 여백 */
+}
+.section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px; /* 최대 너비 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+.about {
+    background-color: white; /* 변경된 배경색 */
+    padding: 60px 0; /* 섹션 패딩 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    flex-direction: column; /* 세로 정렬 */
+    border: 2px solid rgb(193, 193, 223);
+    border-radius: 15px;
+}
+.about img {
+    width: 150px; /* 이미지 크기 조정 */
+    height: 150px;
+    border-radius: 50%; /* 둥근 이미지 */
+    margin-bottom: 20px; /* 이미지와 텍스트 간격 */
+}
+.about p {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(193, 193, 223);
+    max-width: 600px; /* 텍스트 최대 너비 */
+}
+.skills, .projects, .contacts {
+    background-color: white; /* .about과 동일한 배경색 */
+    padding: 60px 0; /* .about과 동일한 패딩 */
+    display: flex; /* Flexbox 레이아웃 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    flex-direction: column; /* 세로로 요소 쌓기 */
+    border: 2px solid rgb(193, 193, 223); /* .about과 동일한 테두리 */
+    border-radius: 15px; /* .about과 동일한 테두리 반경 */
+}
+
+.skills h2, .projects h2, .contacts h2 {
+    font-size: 2.5em; /* .about과 동일한 제목 크기 */
+    margin-bottom: 20px; /* .about과 동일한 마진 하단 */
+}
+
+.skills p, .projects p, .contacts p {
+    background-color: white; /* .about과 동일한 배경색 */
+    padding: 20px; /* .about과 동일한 패딩 */
+    border-radius: 15px; /* .about과 동일한 테두리 반경 */
+    border: 2px solid rgb(193, 193, 223); /* .about과 동일한 테두리 */
+    max-width: 600px; /* .about과 동일한 최대 너비 */
 }
 </style>
-
 </head>
 <body>
+    <header class="header">
+        <div class="logo" onclick="location.reload();">
+            MinSeong
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-        <header class="header">
-            <div class="logo">
-                MinSeong
-            </div>
-            <div class="menu">
-                <ul>
-                    <li>Abouts</li>
-                    <li>Skills</li>
-                    <li>Projects</li>
-                    <li>Contacts</li>
-                </ul>
-            </div>
-        </header>
+        <section id="about" class="section about">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <h2>About Me</h2>
+            <p>Dongguk.Univ Department of AI Software Convergence, Multimedia Software Engineering<br>
+            Hello! I'm MinSeong, a passionate developer specialized in AI and multimedia software engineering. I love creating innovative solutions and exploring new technologies.</p>
+        </section>
+
+        <section id="skills" class="section skills">
+            <h2>Skills</h2>
+            <p>HTML, CSS, JavaScript, Python, Machine Learning, Deep Learning, etc.</p>
+        </section>
+
+        <section id="projects" class="section projects">
+            <h2>Projects</h2>
+            <p>Project 1: Description<br>
+            Project 2: Description<br>
+            Project 3: Description</p>
+        </section>
+
+        <section id="contacts" class="section contacts">
+            <h2>Contact</h2>
+            <p>Email: minseong@example.com<br>
+            LinkedIn: <a href="#">linkedin.com/in/minseong</a></p>
+        </section>
     </div>
-<!-- <h3 onmouseover="show()" onmouseout="hide()">
-MinSeong PortFolio
-</h3>
-<hr>
-<div><img id="fig" src=""></div>
-<div><span class="span1">Dongguk.Univ</span></div>
-<div><span class="span2">Department of AI Software Convergence, Multimedia Software Engineering</span></div>
-<div><span class="span3">MinSeong</span></div> -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('transparent');
+            } else {
+                header.classList.remove('transparent');
+            }
+        });
+    </script>
 </body>
 </html>
