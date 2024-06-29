@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>MinSeong의 포트폴리오</title>
+<title>MinSeong's portfolio</title>
 <style>
 * {
     margin: 0;
@@ -98,8 +98,8 @@ body {
     border-radius: 15px;
 }
 .about img {
-    width: 150px; /* 이미지 크기 조정 */
-    height: 150px;
+    width: 160px; /* 이미지 크기 조정 */
+    height: 200px;
     border-radius: 50%; /* 둥근 이미지 */
     margin-bottom: 20px; /* 이미지와 텍스트 간격 */
 }
@@ -147,13 +147,17 @@ body {
     flex-direction: column;
     align-items: center; /* 가운데 정렬 */
     text-align: center; /* 내용물 텍스트 가운데 정렬 */
+    cursor: pointer; /* 포인터 커서 추가 */
+    transition: transform 0.3s ease; /* 변형 전환 효과 추가 */
+    z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
 }
 
 .profile-card img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
+    transition: transform 0.3s ease; /* 이미지 변형 전환 효과 추가 */
 }
 
 .profile-card h3 {
@@ -164,6 +168,30 @@ body {
 .profile-card p {
     font-size: 1.1em;
     line-height: 1.6;
+}
+
+.profile-card.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5); /* 가운데 정렬 및 확대 */
+    z-index: 2000; /* 다른 요소보다 위에 표시 */
+    width: 80%; /* 세로 길이의 80%로 조정 */
+    max-width: 400px; /* 최대 너비 설정 (선택 사항) */
+    height: auto; /* 확대된 상태의 높이 */
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* 그림자 효과 추가 */
+}
+
+.profile-card.active img {
+    width: 200px; /* 확대된 상태의 이미지 너비 */
+    height: 250px; /* 확대된 상태의 이미지 높이 */
+}
+
+.profile-card.active h3,
+.profile-card.active p {
+    font-size: 2em; /* 확대된 상태의 글꼴 크기 */
+    margin-bottom: 20px;
 }
 </style>
 </head>
@@ -183,10 +211,12 @@ body {
     </header>
     <div class="container">
         <section id="about" class="section about">
-            <img src="https://via.placeholder.com/150" alt="Profile Picture">
-            <h2>About Me</h2>
-            <p>Dongguk.Univ Department of AI Software Convergence, Multimedia Software Engineering<br>
-            Hello! I'm MinSeong, a passionate developer specialized in AI and multimedia software engineering. I love creating innovative solutions and exploring new technologies.</p>
+            <div class="about-content">
+                <img src="img/profile.png" alt="Profile Picture">
+                <h2>About Me</h2>
+                <p>Dongguk.Univ Department of AI Software Convergence, Multimedia Software Engineering<br>
+                Hello! I'm MinSeong, a passionate developer specialized in AI and multimedia software engineering. I love creating innovative solutions and exploring new technologies.</p>
+            </div>
         </section>
 
         <section id="skills" class="section skills">
@@ -209,13 +239,19 @@ body {
     </div>
 
     <!-- 프로필 카드 추가 -->
-    <div class="profile-card">
-        <img src="https://via.placeholder.com/100" alt="Profile Picture">
+    <div class="profile-card" onclick="toggleProfileCard()">
+        <img src="img/profile.png" alt="Profile Picture">
         <h3>MinSeong</h3>
         <p>AI & Multimedia Developer</p>
     </div>
 
     <script>
+        // 프로필 카드 확대/축소 토글 함수
+        function toggleProfileCard() {
+            const profileCard = document.querySelector('.profile-card');
+            profileCard.classList.toggle('active');
+        }
+
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
             if (window.scrollY > 50) {
