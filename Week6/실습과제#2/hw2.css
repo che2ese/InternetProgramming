@@ -1,0 +1,37 @@
+input:focus,
+textarea:focus {
+  border-color: #555;
+}
+
+.form-container > h2 {
+  color: #333;
+  text-align: center;
+}
+
+.form-container form label {
+  display: block;
+  margin-top: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
