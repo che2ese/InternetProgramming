@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="utf-8">
-<title>MinSeong's portfolio</title>
-<script src="js/homepage.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <title>MinSeong's portfolio</title>
+    <script src="js/homepage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo" onclick="location.reload();">
-            MinSeong
-        </div>
+        <div class="logo" onclick="location.reload();">MinSeong</div>
         <nav class="menu">
             <ul>
                 <li><a href="#about">About</a></li>
@@ -52,29 +50,115 @@
                         </ul>
                     </div>
                 </div>
-            </div> 
+            </div>
         </section>
-
         <section id="skills" class="section skills">
             <h2>Skills</h2>
-            <p>HTML, CSS, JavaScript, Python, Machine Learning, Deep Learning, etc.</p>
+            <div class="skills-container">
+                <div class="skill-section upper">
+                    <h3>Languages</h3>
+                    <br>
+                    <div class="skill">
+                        <div class="skill-name">C</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">C++</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">C#</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">JAVA</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-section middle">
+                    <h3>GameEngine</h3>
+                    <br>
+                    <div class="skill">
+                        <div class="skill-name">Unity</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">UnrealEngine</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">RobloxStudio</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-section lower">
+                    <h3>ETC</h3>
+                    <br>
+                    <div class="skill">
+                        <div class="skill-name">HTML, CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Linux</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">DeepLearning</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">ComputerVision</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-
         <section id="projects" class="section projects">
             <h2>Projects</h2>
             <p>Project 1: Description<br>
             Project 2: Description<br>
             Project 3: Description</p>
         </section>
-
         <section id="contacts" class="section contacts">
             <h2>Contact</h2>
             <p>Email: kris1129@naver.com<br>
             LinkedIn: <a href="#">linkedin.com/in/minseong</a></p>
         </section>
     </div>
-
-    <!-- 프로필 카드 추가 -->
     <div class="profile-card" onclick="toggleProfileCard()">
         <img src="img/profile.png" alt="Profile Picture">
         <h3>MinSeong</h3>
