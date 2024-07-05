@@ -86,4 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillSections = document.querySelectorAll('.skill-section');
     skillSections.forEach(section => observer.observe(section));
 });
+document.querySelectorAll('.project').forEach((project) => {
+    project.addEventListener('click', () => {
+        project.classList.toggle('flipped');
+    });
+});
 
