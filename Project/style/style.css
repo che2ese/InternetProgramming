@@ -104,10 +104,25 @@ body {
     background-color: white;
     padding: 60px 0;
     display: flex;
-    justify-content: center;
     align-items: center;
     border: 2px solid rgb(193, 193, 223);
     border-radius: 15px;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#animate-text {
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif; 
+    white-space: pre-line;
+    line-height: 1.6; /* 줄 간격을 설정합니다. */
+}
+
+.about .information h3{
+    font-weight:lighter;
+    color:darkgray;
+    font-size: 22px;
 }
 
 .about .about-wrap {
@@ -115,6 +130,7 @@ body {
     border-radius: 15px;
     border: 2px solid rgb(193, 193, 223);
     text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .about .about-content {
@@ -251,7 +267,15 @@ body {
 .skill-section.lower .skill-bar {
     border: 1px solid lightpink;
 }
-
+.skill-section.upper .skill-level:hover {
+    background: linear-gradient(to right, white, #83b7c9); /* 더 진한 블루색으로 변경 */
+}
+.skill-section.middle .skill-level:hover {
+    background: linear-gradient(to right, white, #a5a5a5); /* 더 진한 회색으로 변경 */
+}
+.skill-section.lower .skill-level:hover {
+    background: linear-gradient(to right, white, #f08695); /* 더 진한 핑크색으로 변경 */
+}
 .skill {
     display: flex;
     align-items: center;
@@ -263,9 +287,11 @@ body {
     flex: 0.7;
     margin-right: 10px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight:lighter;
 }
-
+.skill-name:hover{
+    font-weight:bold;
+}
 .skill-bar {
     flex: 3.5;
     background-color: white;
@@ -273,7 +299,9 @@ body {
     overflow: hidden;
     height: 15px;
 }
-
+.skill-bar:hover{
+    height: 18px;
+}
 .skill-level {
     height: 100%;
     border-radius: 20px;
