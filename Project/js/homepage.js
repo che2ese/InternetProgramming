@@ -56,4 +56,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 100); // 한 글자씩 출력되는 간격을 100ms로 설정
 }); 
+document.addEventListener('DOMContentLoaded', () => {
+    const skillLevels = document.querySelectorAll('.skill-level');
+    skillLevels.forEach(skillLevel => {
+        const width = skillLevel.style.width;
+        skillLevel.style.setProperty('--skill-level-width', width);
+        skillLevel.style.width = '0';
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillLevels = entry.target.querySelectorAll('.skill-level');
+                skillLevels.forEach(skillLevel => {
+                    skillLevel.style.animation = 'fillSkillBar 2s ease forwards'; // 애니메이션 시간 2초로 설정
+                });
+            } else {
+                const skillLevels = entry.target.querySelectorAll('.skill-level');
+                skillLevels.forEach(skillLevel => {
+                    skillLevel.style.width = '0';
+                    skillLevel.style.animation = 'none';
+                });
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    const skillSections = document.querySelectorAll('.skill-section');
+    skillSections.forEach(section => observer.observe(section));
+});
 

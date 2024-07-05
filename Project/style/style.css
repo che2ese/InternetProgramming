@@ -124,6 +124,14 @@ body {
     color:darkgray;
     font-size: 22px;
 }
+.about .information h3 a{
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+}
+.about .information h3 a:hover{
+    color: black;
+    text-decoration: none;
+}
 
 .about .about-wrap {
     width: 60%;
@@ -340,6 +348,7 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .profile-card img {
