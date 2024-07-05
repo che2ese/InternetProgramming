@@ -91,4 +91,3 @@ document.querySelectorAll('.project').forEach((project) => {
         project.classList.toggle('flipped');
     });
 });
-

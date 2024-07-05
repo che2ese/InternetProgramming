@@ -450,32 +450,76 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
+}
+.project .back .description {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(193, 193, 223);
+    height: 160px;
+    width: 250px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    text-align: left;
+    flex-direction: column;
 }
 
+.project .back .description .font{
+    font-size: 12px;
+}
+.project .back .description h3{
+    font-size: 18px;
+    color: rgb(108, 32, 179);
+}
+.project .back .description h4{
+    font-size: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
 .project .front {
     background-color: white;
 }
-
+.project .front img{
+    height:100%;
+    width:100%;
+    border-radius: 10px;
+}
 .project .back {
+    display: flex;
     transform: rotateY(180deg);
     background-color: white;
     border: 2px solid rgb(193, 193, 223);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
 }
-
-.btn {
+.project .back .back-wrap{
+    justify-content: space-around;
+}
+.project .back .back-wrap .btn {
+    border: 2px solid rgb(193, 193, 223);
     background-color: rgb(193, 193, 223);
     color: white;
-    border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
 }
-
-.btn:hover {
-    background-color: rgb(114, 114, 114);
+.project .back .back-wrap .gitbtn {
+    border: 2px solid rgb(193, 193, 223);
+    background-color: white;
+    color: rgb(193, 193, 223);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
+.project .back .back-wrap .btn:hover {
+    background-color: white;
+    color: rgb(193, 193, 223);
+}
+.project .back .back-wrap .gitbtn:hover {
+    background-color: rgb(193, 193, 223);
+    color: white;
+}
