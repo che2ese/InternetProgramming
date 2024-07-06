@@ -91,3 +91,22 @@ document.querySelectorAll('.project').forEach((project) => {
         project.classList.toggle('flipped');
     });
 });
+
+window.addEventListener('resize', function() {
+    const profileCard = document.querySelector('.profile-card');
+    if (window.innerWidth < 1200) { // Adjust the width threshold as needed
+        profileCard.style.display = 'none';
+    } else {
+        profileCard.style.display = 'flex';
+    }
+});
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const profileCard = document.querySelector('.profile-card');
+    if (window.innerWidth < 1800) { // Adjust the width threshold as needed
+        profileCard.style.display = 'none';
+    } else {
+        profileCard.style.display = 'flex';
+    }
+});

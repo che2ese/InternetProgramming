@@ -198,7 +198,7 @@ body {
     text-decoration: underline;
 }
 
-.skills, .projects, .contacts {
+.skills, .projects, .experience {
     background-color: white;
     padding: 60px 0;
     display: flex;
@@ -209,12 +209,12 @@ body {
     border-radius: 15px;
 }
 
-.skills h2, .projects h2, .contacts h2 {
+.skills h2, .projects h2, .experience h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.skills p, .projects p, .contacts p {
+.skills p, .projects p, .experience p {
     background-color: white;
     padding: 20px;
     border-radius: 15px;
@@ -522,4 +522,34 @@ body {
 .project .back .back-wrap .gitbtn:hover {
     background-color: rgb(193, 193, 223);
     color: white;
+}
+.experience table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    height: 80%;
+    box-sizing: border-box; /* 요소의 크기를 패딩과 테두리를 포함하여 계산 */
+}
+
+.experience th, .experience td {
+    padding: 12px;
+    border: 1px solid rgb(103, 103, 143);
+    text-align: left;
+    box-sizing: border-box; /* 요소의 크기를 패딩과 테두리를 포함하여 계산 */
+}
+
+.experience th {
+    background-color: rgb(154, 154, 192);
+}
+
+.experience tbody tr:nth-child(even) {
+    background-color: lavender;
+}
+
+.experience tbody tr:hover {
+    background-color: #d8d8d8;
+}
+
+.experience tbody tr:nth-child(even):hover {
+    background-color: rgb(187, 187, 218);
 }
