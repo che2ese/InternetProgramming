@@ -525,17 +525,20 @@ body {
 }
 .experience table {
     width: 80%;
-    border-collapse: collapse;
+    border-collapse: separate; /* 셀 경계를 분리하여 둥글게 만듭니다 */
+    border-spacing: 0; /* 셀 사이의 간격을 0으로 설정합니다 */
     margin-top: 20px;
     height: 80%;
-    box-sizing: border-box; /* 요소의 크기를 패딩과 테두리를 포함하여 계산 */
+    box-sizing: border-box;
+    border-radius: 15px; /* 테이블 테두리를 둥글게 만듭니다 */
 }
 
 .experience th, .experience td {
     padding: 12px;
-    border: 1px solid rgb(103, 103, 143);
+    border: 1px solid rgb(103, 103, 143); /* 셀 테두리 설정 */
     text-align: left;
-    box-sizing: border-box; /* 요소의 크기를 패딩과 테두리를 포함하여 계산 */
+    box-sizing: border-box;
+    border-radius: 15px; /* 셀 테두리를 둥글게 만듭니다 */
 }
 
 .experience th {
@@ -553,3 +556,4 @@ body {
 .experience tbody tr:nth-child(even):hover {
     background-color: rgb(187, 187, 218);
 }
+
