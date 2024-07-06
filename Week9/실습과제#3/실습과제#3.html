@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>이름 및 나이 입력 프로그램</title>
+  </head>
+  <body>
+    <h1>이름 및 나이 입력 프로그램</h1>
+    <form id="nameAgeForm">
+      <button type="button" onclick="getNameAndAge()">이름 및 나이 입력</button>
+    </form>
+
+    <p id="outputText"></p>
+
+    <script>
+      function getNameAndAge() {
+        const userName = prompt("이름을 입력하세요");
+        if (!userName) {
+          alert("이름을 입력해야 합니다.");
+          return;
+        }
+
+        const userAge = prompt("나이를 입력하세요");
+        if (!userAge || isNaN(userAge)) {
+          alert("유효한 나이를 입력해야 합니다.");
+          return;
+        }
+
+        const ageNumber = parseInt(userAge, 10);
+        const ageStatus = ageNumber >= 20 ? "성인" : "미성년자";
+
+        const outputText = document.getElementById("outputText");
+        outputText.textContent = `이름: ${userName}, 나이: ${userAge} (${ageStatus})`;
+      }
+    </script>
+  </body>
+</html>
