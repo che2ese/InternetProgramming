@@ -110,3 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         profileCard.style.display = 'flex';
     }
 });
+function toggleProfileCard() {
+    var profileCard = document.querySelector('.profile-card');
+    profileCard.classList.toggle('active');
+}
