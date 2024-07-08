@@ -557,3 +557,51 @@ body {
     background-color: rgb(187, 187, 218);
 }
 
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        .footer-inner {
+            background-color: rgb(187, 187, 218);
+
+            .container {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                height: 80px;
+                padding: 20px;
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+        .custom-shape-divider-bottom-1656519457 {
+            position: absolute;
+            bottom: 78px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-bottom-1656519457 svg {
+            position: relative;
+            display: block;
+            width: calc(114% + 1.3px);
+            height: 60px;
+        }
+
+        .custom-shape-divider-bottom-1656519457 .shape-fill {
+            fill: rgb(187, 187, 218);
+        }
+    }
+
+@media (max-width: 768px) {
+    .profile-card {
+        display: none;
+    }
+    .section{
+        height: 80vh;
+    }
+}
