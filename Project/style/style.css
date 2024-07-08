@@ -116,7 +116,7 @@ body {
     font-size: 32px;
     font-family: 'Montserrat', sans-serif; 
     white-space: pre-line;
-    line-height: 1.6; /* 줄 간격을 설정합니다. */
+    line-height: 1.6; 
 }
 
 .about .information h3{
@@ -276,13 +276,13 @@ body {
     border: 1px solid lightpink;
 }
 .skill-section.upper .skill-level:hover {
-    background: linear-gradient(to right, white, #83b7c9); /* 더 진한 블루색으로 변경 */
+    background: linear-gradient(to right, white, #83b7c9); 
 }
 .skill-section.middle .skill-level:hover {
-    background: linear-gradient(to right, white, #a5a5a5); /* 더 진한 회색으로 변경 */
+    background: linear-gradient(to right, white, #a5a5a5);
 }
 .skill-section.lower .skill-level:hover {
-    background: linear-gradient(to right, white, #f08695); /* 더 진한 핑크색으로 변경 */
+    background: linear-gradient(to right, white, #f08695);
 }
 .skill {
     display: flex;
@@ -318,7 +318,7 @@ body {
     background-size: 200% 100%;
     background-image: linear-gradient(to right, white, lightblue);
     width: 0; /* 초기 상태 */
-    animation: fillSkillBar 2s ease forwards; /* 애니메이션 시간 2초로 설정 */
+    animation: fillSkillBar 2s ease forwards; 
 }
 
 @keyframes fillSkillBar {
@@ -580,21 +580,21 @@ body {
 
 .experience td button {
     position: absolute;
-    right: 10px; /* Adjust the distance from the right */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for vertical centering */
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
     padding: 8px 12px;
     background-color: rgb(103, 103, 143);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    opacity: 0; /* Initially hide button */
+    opacity: 0; 
     transition: opacity 0.3s ease;
 }
 
 .experience td:hover button {
-    opacity: 1; /* Show button on hover */
+    opacity: 1; 
 }
     footer {
         position: absolute;
